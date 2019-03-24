@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <org.opencv.android.JavaCameraView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:id="@+id/tutorial1_activity_java_surface_view"
+            opencv:show_fps="true"
+            opencv:camera_id="any" />
+
+    <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/line_virtical_center" app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:visibility="visible"
+            android:background="@color/colorPrimaryDark"/>
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:id="@+id/line_horizontal_center"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible" android:background="@color/colorAccent"
+    />
+
+</android.support.constraint.ConstraintLayout>
